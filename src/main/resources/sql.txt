@@ -1,0 +1,22 @@
+CREATE TABLE `mc_inhosp_drugcost_caseid` (
+  `mhiscode` bigint(20) DEFAULT NULL,
+  `caseid` varchar(64) NOT NULL,
+  `itemcode` varchar(64) NOT NULL,
+  `drugindex` int(11) NOT NULL,
+  `itemunit` varchar(64) DEFAULT '',
+  `is_out` int(11) NOT NULL DEFAULT '0',
+  `is_use` int(11) NOT NULL DEFAULT '1',
+  `cost` decimal(18,4) NOT NULL,
+  `itemnum` decimal(18,4) DEFAULT NULL,
+  `deptcode` varchar(64) DEFAULT '',
+  `wardcode` varchar(64) DEFAULT '',
+  `doctorcode` varchar(64) DEFAULT '',
+  `medgroupcode` varchar(64) DEFAULT '',
+  `itemname` varchar(128) NOT NULL,
+  `costtime` varchar(20) NOT NULL,
+  `routecode` varchar(128) DEFAULT '',
+  `searchcode` varchar(128) DEFAULT NULL,
+  KEY `idx_mc_inhosp_drugcost_caseid` (`mhiscode`,`caseid`),
+  KEY `idx_mc_inhosp_drugcost_drugindex` (`drugindex`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
